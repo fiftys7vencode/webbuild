@@ -1,32 +1,45 @@
 var preview = document.getElementById("websitepreview");
 
 function deleteElement() {
-    var name = prompt("Name: ");
-    var confirm1 = confirm("Are you sure to delete that item?");
-
-    if(confirm1) {
-        preview.removeChild(document.getElementById(name))
+    if(preview.innerHTML != "") {
+        var name = prompt("Name: ");
+        if(document.getElementById(name) != null) {
+            var confirm1 = confirm("Are you sure to delete that item?");
+            if(confirm1) {
+                preview.removeChild(document.getElementById(name));
+            }
+        } else {
+            alert("Error: That item does not exist.")
+        };
+    } else {
+        alert("Error: no elements added to the website.")
     }
 };
 
 function exportToHTML() {
-    const htmlContent = `<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <title>Website</title>
-</head>
-<body class="w3-center">
-    ${preview.innerHTML}
-</body>
-</html>`;
-
-    const encodedHtml = encodeURIComponent(htmlContent);
-    const dataUri = `data:text/plain;charset=utf-8,${encodedHtml}`;
-    const newWindow = window.open();
-    newWindow.document.write(`<!-- Built using WebBuild --> <style>body{font-family:sans-serif;text-align:center;}</style> <title>Export to HTML</title> <h1>Export to HTML</h1> <p>Your exported HTML code is written below.</p> <iframe src="${dataUri}" frameborder="0" style="border:none; width:100%; height:100%;" allowfullscreen></iframe>`);
+    if(preview.innerHTML != "") {
+        const htmlContent = `<!DOCTYPE html>
+        <!-- Built using WebBuild -->
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <title>Website</title>
+        </head>
+        <body class="w3-center">
+            ${preview.innerHTML}
+        </body>
+        </html>`;
+        
+            const encodedHtml = encodeURIComponent(htmlContent);
+            const dataUri = `data:text/plain;charset=utf-8,${encodedHtml}`;
+            const newWindow = window.open();
+            newWindow.document.write(`<style>body{font-family:sans-serif;text-align:center;}</style> <title>Export to HTML</title> <h1>Export to HTML</h1> <p>Your exported HTML code is written below.</p> <iframe src="${dataUri}" frameborder="0" style="border:none; width:100%; height:100%;" allowfullscreen></iframe>`);
+    } else {
+        alert("Error: no elements added to the website.")
+    }
 };
 
 
@@ -39,7 +52,7 @@ function addItem(item) {
         element.id = name;
         element.innerText = text;
         preview.appendChild(element);
-    };
+    }
 
     if(item == "heading2") {
         var name = prompt("Name: ");
@@ -48,7 +61,7 @@ function addItem(item) {
         element.id = name;
         element.innerText = text;
         preview.appendChild(element);
-    };
+    }
 
     if(item == "heading3") {
         var name = prompt("Name: ");
@@ -57,7 +70,7 @@ function addItem(item) {
         element.id = name;
         element.innerText = text;
         preview.appendChild(element);
-    };
+    }
 
     if(item == "text") {
         var name = prompt("Name: ");
@@ -66,7 +79,7 @@ function addItem(item) {
         element.id = name;
         element.innerText = text;
         preview.appendChild(element);
-    };
+    }
 
     if(item == "link") {
         var name = prompt("Name: ");
@@ -80,14 +93,13 @@ function addItem(item) {
         element2.target = "_blank";
         element.appendChild(element2);
         preview.appendChild(element);
-    };
+    }
     
     if (item == "button") {
         var name = prompt("Name: ");
         var text = prompt("Text: ");
         var link = prompt("Link: ");
         var element = document.createElement("p");
-
         element.id = name;
         var element2 = document.createElement("a");
         element2.innerText = text;
@@ -96,7 +108,7 @@ function addItem(item) {
         element2.classList.add("w3-button", "w3-round", "w3-blue");
         element.appendChild(element2);
         preview.appendChild(element);
-    };
+    }
     
     if(item == "inputfield") {
         var name = prompt("Name: ");
@@ -105,7 +117,7 @@ function addItem(item) {
         element.id = name;
         element.placeholder = placeholder;
         preview.appendChild(element);
-    };
+    }
 
     if(item == "inputbox") {
         var name = prompt("Name: ");
@@ -114,7 +126,7 @@ function addItem(item) {
         element.id = name;
         element.placeholder = placeholder;
         preview.appendChild(element);
-    };
+    }
 
     if(item == "footer") {
         var name = prompt("Name: ");
@@ -124,24 +136,33 @@ function addItem(item) {
         element.innerText = copyrightnotice;
         element.classList.add("w3-black");
         preview.appendChild(element);
-    };
+    }
 
     if(item == "separator") {
         var name = prompt("Name: ");
         var element = document.createElement("hr");
         element.id = name;
         preview.appendChild(element);
-    };
+    }
 
-    if(item == "table") {
+    if (item == "table") {
         var name = prompt("Name: ");
-        var rowsandcells = prompt("Rows and cells (in HTML): ");
+        var rows = prompt("Number of rows: ");
+        var cols = prompt("Number of columns: ");
         var element = document.createElement("table");
         element.id = name;
-        element.innerHTML = rowsandcells;
         element.classList.add("w3-table", "w3-striped", "w3-bordered");
+    
+        for (var i = 0; i < rows; i++) {
+            var row = element.insertRow(i);
+            for (var j = 0; j < cols; j++) {
+                var cell = row.insertCell(j);
+                cell.innerHTML = prompt(`Enter content for cell (${i + 1}, ${j + 1}):`);
+            }
+        }
+    
         preview.appendChild(element);
-    };
+    }
 
     if(item == "image") {
         var name = prompt("Name: ");
@@ -154,8 +175,8 @@ function addItem(item) {
         element.width = width;
         element.height = height;
         preview.appendChild(element);
-    };
-    
+    }
+
     if(item == "websiteembed") {
         var name = prompt("Name: ");
         var website = prompt("Website URL: ");
@@ -164,7 +185,7 @@ function addItem(item) {
         element.frameborder = "0px";
         element.src = website;
         preview.appendChild(element);
-    };
+    }
 
     if(item == "customhtml") {
         var name = prompt("Name: ");
@@ -173,6 +194,77 @@ function addItem(item) {
         element.id = name;
         element.innerHTML = html;
         preview.appendChild(element);
+    }
+
+    if(item == "checkbox") {
+        var name = prompt("Name: ");
+        var label = prompt("Label: ");
+        var element = document.createElement("div");
+        element.id = name;
+        var input = document.createElement("input");
+        input.type = "checkbox";
+        var labelElement = document.createElement("label");
+        labelElement.innerText = label;
+        element.appendChild(input);
+        element.appendChild(labelElement);
+        preview.appendChild(element);
+    }
+
+    if(item == "card") {
+        var name = prompt("Name: ");
+        var title = prompt("Title: ");
+        var content = prompt("Content (You can use HTML): ");
+        var element = document.createElement("div");
+        element.id = name;
+        element.classList.add("w3-card", "w3-padding", "w3-margin", "w3-white");
+        var titleElement = document.createElement("h3");
+        titleElement.innerText = title;
+        var contentElement = document.createElement("p");
+        contentElement.innerText = content;
+        element.appendChild(titleElement);
+        element.appendChild(contentElement);
+        preview.appendChild(element);
+    }
+
+    if(item == "chart") {
+        var name = prompt("Name: ");
+        var type = prompt("Chart Type (bar, line, pie): ");
+        var data = prompt("Data (comma-separated values): ");
+        var labels = prompt("Labels (comma-separated values): ");
+        var element = document.createElement("canvas");
+        element.id = name;
+        preview.appendChild(element);
+
+        var ctx = element.getContext('2d');
+        var chart = new Chart(ctx, {
+            type: type,
+            data: {
+                labels: labels.split(","),
+                datasets: [{
+                    data: data.split(","),
+                    backgroundColor: ['red', 'blue', 'green', 'yellow', 'orange', 'purple']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
     };
 
+    if (item == "quote") {
+        var name = prompt("Name: ");
+        var text = prompt("Text: ");
+        var author = prompt("Author: ");
+        var element = document.createElement("div");
+        element.id = name;
+        element.classList.add("w3-panel", "w3-leftbar", "w3-light-grey");
+        var element2 = document.createElement("i");
+        element2.innerText = text;
+        element2.classList.add("w3-xlarge", "w3-serif");
+        var element3 = document.createElement("p");
+        element3.innerText = author;
+        element.appendChild(element2);
+        element.appendChild(element3);
+        preview.appendChild(element);
+    };
 };

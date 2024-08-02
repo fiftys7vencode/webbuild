@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>WebBuild Website Builder</title>
 </head>
 <body>
@@ -14,32 +15,38 @@
         <p><a onclick="addItem('heading2')" class="w3-button w3-round w3-white">Heading 2</a></p>
         <p><a onclick="addItem('heading3')" class="w3-button w3-round w3-white">Heading 3</a></p>
         <p><a onclick="addItem('text')" class="w3-button w3-round w3-white">Text</a></p>
+        <p><a onclick="addItem('quote')" class="w3-button w3-round w3-white">Quote</a></p>
     
         <p><small>Interactive Elements</small></p><hr>
         <p><a onclick="addItem('link')" class="w3-button w3-round w3-white">Link</a></p>
         <p><a onclick="addItem('button')" class="w3-button w3-round w3-white">Button</a></p>
         <p><a onclick="addItem('inputfield')" class="w3-button w3-round w3-white">Input Field</a></p>
         <p><a onclick="addItem('inputbox')" class="w3-button w3-round w3-white">Input Box</a></p>
+        <p><a onclick="addItem('checkbox')" class="w3-button w3-round w3-white">Checkbox</a></p>
     
         <p><small>Structural Elements</small></p><hr>
         <p><a onclick="addItem('footer')" class="w3-button w3-round w3-white">Footer</a></p>
         <p><a onclick="addItem('separator')" class="w3-button w3-round w3-white">Separator</a></p>
+        <p><a onclick="addItem('card')" class="w3-button w3-round w3-white">Card</a></p>
     
         <p><small>Data Elements</small></p><hr>
         <p><a onclick="addItem('table')" class="w3-button w3-round w3-white">Table</a></p>
         <p><a onclick="addItem('image')" class="w3-button w3-round w3-white">Image</a></p>
+        <p><a onclick="addItem('chart')" class="w3-button w3-round w3-white">Chart</a></p>
     
         <p><small>Embedded Elements</small></p><hr>
         <p><a onclick="addItem('websiteembed')" class="w3-button w3-round w3-white">Website Embed</a></p>
         <p><a onclick="addItem('customhtml')" class="w3-button w3-round w3-white">Custom HTML</a></p>
         <hr>
     </div>
+    
     <div class="w3-bar w3-black" style="margin-left:25%">
         <div onclick="exportToHTML()" class="w3-bar-item w3-button w3-hover-white">Export to HTML</div>
         <div onclick="deleteElement()" class="w3-bar-item w3-button w3-hover-white">Delete Item</div>
         <div onclick="window.location.assign('/index.html')" class="w3-bar-item w3-button w3-hover-white">Homepage</div>
         
       </div>
+      
     <div id="websitepreview" class="w3-padding w3-center" style="margin-left:25%"></div>
 </body>
 
