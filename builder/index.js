@@ -20,6 +20,7 @@ function exportToHTML() {
     if(preview.innerHTML != "") {
         const htmlContent = `<!DOCTYPE html>
         <!-- Built using WebBuild -->
+        <!-- https://fiftys7vencode.github.io/webbuild -->
         <html lang="en">
         <head>
             <meta charset="UTF-8">
@@ -262,9 +263,21 @@ function addItem(item) {
         element2.innerText = text;
         element2.classList.add("w3-xlarge", "w3-serif");
         var element3 = document.createElement("p");
-        element3.innerText = author;
+        element3.innerText = "~" + author;
         element.appendChild(element2);
         element.appendChild(element3);
         preview.appendChild(element);
     };
+    
+    if(item == "progressbar") {
+        var name = prompt("Name: ");
+        var amount = prompt("Amount (set to 0 if you want an animation to play): ");
+        var element = document.createElement("progress");
+        element.id = name;
+        element.max = 100;
+        if(amount != 0) {
+            element.value = amount;
+        }
+        preview.appendChild(element);
+    }
 };
