@@ -1,13 +1,12 @@
 var preview = document.getElementById("websitepreview");
 
-function deleteAll() {
-    var confirm1 = confirm("Are you sure to delete all?");
+function deleteElement() {
+    var name = prompt("Name: ");
+    var confirm1 = confirm("Are you sure to delete that item?");
+
     if(confirm1) {
-        var confirm2 = confirm("Are you really sure to delete all? This CANNOT be undone.");
-        if(confirm2) {
-            preview.innerHTML = "";
-        };
-    };
+        preview.removeChild(document.getElementById(name))
+    }
 };
 
 function exportToHTML() {
