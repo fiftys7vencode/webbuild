@@ -1,6 +1,12 @@
 var preview = document.getElementById("websitepreview");
+var jseditor = document.getElementById("jseditor");
+var togglemode = document.getElementById("togglemodebutton");
+var itemsbar = document.getElementById("itemssidebar");
+var navbar = document.getElementById("navigationbar");
+var previewjs = document.getElementById("websitepreviewjs");
+var jseditorcode = document.getElementById("jscode");
 
-function deleteElement() {
+function deleteItem() {
     if(preview.innerHTML != "") {
         var name = prompt("Name: ");
         if(document.getElementById(name) != null) {
@@ -12,7 +18,7 @@ function deleteElement() {
             alert("Error: That item does not exist.")
         };
     } else {
-        alert("Error: no elements added to the website.")
+        alert("Error: no items added to the website.")
     }
 };
 
@@ -38,11 +44,39 @@ function exportToHTML() {
             const newWindow = window.open();
             newWindow.document.write(`<style>body{font-family:sans-serif;text-align:center;}</style> <title>Export to HTML</title> <h1>Export to HTML</h1> <p>Your exported HTML code is written below.</p> <iframe src="${dataUri}" frameborder="0" style="border:none; width:100%; height:100%;" allowfullscreen></iframe>`);
     } else {
-        alert("Error: no elements added to the website.")
-    }
+        alert("Error: no items added to the website.")
+    };
 };
 
 
+function toggleMode() {
+    if(jseditor.style.display == "none") {
+        preview.style.display = "none";
+        itemsbar.style.display = "none";
+        navbar.style.marginLeft = "0%";
+        jseditor.style.display = "block";
+        togglemode.innerText = "Design";      
+
+        
+    } else {
+        preview.style.display = "block";
+        itemsbar.style.display = "block";
+        navbar.style.marginLeft = "25%";
+        jseditor.style.display = "none";
+        togglemode.innerText = "Code";
+    };
+};
+
+function saveCode() {
+    previewjs.innerHTML = jseditorcode.value;
+}
+
+function editSetting() {
+    var name = prompt("Name: ");
+    var setting = prompt("Setting (Property): ");
+    var settingvalue = prompt("Setting (Property) new value: ")
+    document.getElementById(name)[setting] = settingvalue;
+}
 
 function addItem(item) {
    var confirm1 = confirm("Are you sure to add " + item + "?");
