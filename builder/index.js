@@ -26,7 +26,6 @@ function exportToHTML() {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
             <title>Website</title>
         </head>
         <body class="w3-center">
@@ -46,6 +45,8 @@ function exportToHTML() {
 
 
 function addItem(item) {
+   var confirm1 = confirm("Are you sure to add " + item + "?");
+   if(confirm1) {
     if(item == "heading1") {
         var name = prompt("Name: ");
         var text = prompt("Text: ");
@@ -227,31 +228,6 @@ function addItem(item) {
         preview.appendChild(element);
     }
 
-    if(item == "chart") {
-        var name = prompt("Name: ");
-        var type = prompt("Chart Type (bar, line, pie): ");
-        var data = prompt("Data (comma-separated values): ");
-        var labels = prompt("Labels (comma-separated values): ");
-        var element = document.createElement("canvas");
-        element.id = name;
-        preview.appendChild(element);
-
-        var ctx = element.getContext('2d');
-        var chart = new Chart(ctx, {
-            type: type,
-            data: {
-                labels: labels.split(","),
-                datasets: [{
-                    data: data.split(","),
-                    backgroundColor: ['red', 'blue', 'green', 'yellow', 'orange', 'purple']
-                }]
-            },
-            options: {
-                responsive: true
-            }
-        });
-    };
-
     if (item == "quote") {
         var name = prompt("Name: ");
         var text = prompt("Text: ");
@@ -280,4 +256,5 @@ function addItem(item) {
         }
         preview.appendChild(element);
     }
+   }
 };
