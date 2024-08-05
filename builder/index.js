@@ -6,6 +6,11 @@ var navbar = document.getElementById("navigationbar");
 var previewjs = document.getElementById("websitepreviewjs");
 var jseditorcode = document.getElementById("jscode");
 
+$(document).ready(function() {
+    $(".sortable").sortable();
+    $(".sortable").disableSelection();
+});
+
 function deleteItem() {
     if(preview.innerHTML != "") {
         var name = prompt("Name: ");

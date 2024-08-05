@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="icon" href="logo.png">
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <title>WebBuild Website Builder</title>
 </head>
 <body>
-    <div id="itemssidebar" class="w3-bar-block w3-sidebar w3-black w3-center" style="width:25%">
+    <div id="itemssidebar" class="w3-bar-block w3-sidebar w3-black w3-center" style="width:20%">
         <h2>Items</h2>
         <p><small>Text Elements</small></p><hr>
         <p><a onclick="addItem('heading1')" class="w3-button w3-round w3-white">Heading 1</a></p>
@@ -35,14 +38,14 @@
         <p><small>Data Elements</small></p><hr>
         <p><a onclick="addItem('table')" class="w3-button w3-round w3-white">Table</a></p>
         <p><a onclick="addItem('image')" class="w3-button w3-round w3-white">Image</a></p>
-    
+
         <p><small>Embedded Elements</small></p><hr>
         <p><a onclick="addItem('websiteembed')" class="w3-button w3-round w3-white">Website Embed</a></p>
         <p><a onclick="addItem('customhtml')" class="w3-button w3-round w3-white">Custom HTML</a></p>
         <hr>
     </div>
     
-    <div id="navigationbar" class="w3-bar w3-black" style="margin-left:25%">
+    <div id="navigationbar" class="w3-bar w3-black" style="margin-left:20%">
         <div onclick="exportToHTML()" class="w3-bar-item w3-button w3-hover-white">Export to HTML</div>
         <div onclick="deleteItem()" class="w3-bar-item w3-button w3-hover-white">Delete Item</div>
         <div onclick="editSetting()" class="w3-bar-item w3-button w3-hover-white">Edit Setting</div>
@@ -50,7 +53,7 @@
         <div onclick="window.location.assign('/index.html')" class="w3-bar-item w3-button w3-hover-white">Homepage</div>
       </div>
       
-    <div id="websitepreview" class="w3-padding w3-center" style="margin-left:25%"><script id="websitepreviewjs"></script></div>
+    <div id="websitepreview" class="w3-padding w3-center sortable" style="margin-left:20%"><script id="websitepreviewjs"></script></div>
     <div id="jseditor" class="w3-padding" style="display: none;"><textarea spellcheck="false" style="width: 100%; resize:vertical;" placeholder="JavaScript code here..." class="w3-codespan" id="jscode"></textarea> <p style="width: 100%;" class="w3-button w3-black w3-round w3-hover-light-grey" onclick="saveCode()">Save</p></div>
 </body>
 
