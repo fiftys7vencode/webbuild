@@ -58,13 +58,27 @@ const icons = [
     "verified",
     "mouse",
     "mouse-2",
-    "pause"
+    "pause",
+    "dice-1",
+    "dice-2",
+    "dice-3",
+    "dice-4",
+    "dice-5",
+    "dice-6",
+    "calculator",
+    "heartbeat",
+    "bar-chart",
+    "pie-chart",
+    "graph-up",
+    "graph-down",
+    "graph-up-2",
+    "graph-down-2"
 ].sort();
 
 document.getElementById("amount").innerText = "Currently we have " + icons.length + " icons."
 
 function showIconEmbed(icon) {
-    prompt(`Select "Image" in the builder and then paste in this URL: `, `https://fiftys7vencode.github.io/webbuild/builder/icons/${icon}.svg`);
+    prompt(`Select "Image" in the builder and then paste in this URL: `, `https://webbuild.js.org/builder/icons/${icon}.svg`);
 }
 
 function createIconCard(icon) {

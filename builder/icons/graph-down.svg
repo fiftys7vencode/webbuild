@@ -1,0 +1,13 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+	<title>Nowy projekt</title>
+	<style>
+		.s0 { fill: none;stroke: #000000;stroke-miterlimit:100;stroke-width: 5.1 } 
+		.s1 { fill: #000000 } 
+		.s2 { fill: #000000;stroke: #000000;stroke-miterlimit:100;stroke-width: 5.1 } 
+	</style>
+	<path id="Kształt 1" class="s0" d="m146.5 152.9h5v205h-5z"/>
+	<path id="Kształt 3" class="s1" d="m185.3 179.3l2.6-4.4 90.9 52.4-2.6 4.5z"/>
+	<path id="Kształt 4" class="s1" d="m272 228.9l4.4 2.6-27 46.8-4.4-2.6z"/>
+	<path id="Kształt 5" class="s1" d="m249 278.2l2.6-4.5 101.3 58.5-2.5 4.5z"/>
+	<path id="Kształt 6" class="s2" d="m147.3 360.8v-5h222.5v5z"/>
+</svg>

@@ -254,7 +254,7 @@ function addItem(item) {
                                 buttonElement.innerText = text;
                                 buttonElement.href = link;
                                 buttonElement.target = "_blank";
-                                buttonElement.classList.add("w3-button", "w3-round", "w3-blue");
+                                element.classList.add("button");
                                 element.appendChild(buttonElement);
                                 preview.appendChild(element);
                             });
