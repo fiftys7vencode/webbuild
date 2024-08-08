@@ -16,6 +16,23 @@
         <br>
         <p><button onclick="completeSetup()" class="btn btn-primary" style="width: 20%;">Continue</button></p>
     </div>
-</body>
     <script src="index.js"></script>
+    <div id="localStorageNotice" style="background-color: #f8f8f8; padding: 10px; text-align: center; font-size: 14px; position: relative;">
+        This site stores your nickname and site content locally in your browser to enable editing and personalization features. No data is sent to a server.
+        <button id="closeNotice" style="background-color: transparent; border: none; font-size: 14px; cursor: pointer; position: absolute; right: 5px; top: -5px;"><strong>&times;</strong></button>
+</body>
+<script>
+    document.getElementById('closeNotice').addEventListener('click', function() {
+var notice = document.getElementById('localStorageNotice');
+notice.style.display = 'none';
+localStorage.setItem('noticeClosed', 'true');
+});
+
+window.onload = function() {
+if (localStorage.getItem('noticeClosed') === 'true') {
+    document.getElementById('localStorageNotice').style.display = 'none';
+}
+};
+
+</script>
 </html>

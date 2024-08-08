@@ -50,7 +50,10 @@
             </div>            
         </div>
     </div>
-
+    <div id="localStorageNotice" style="background-color: #f8f8f8; padding: 10px; text-align: center; font-size: 14px; position: relative;">
+        This site stores your nickname and site content locally in your browser to enable editing and personalization features. No data is sent to a server.
+        <button id="closeNotice" style="background-color: transparent; border: none; font-size: 14px; cursor: pointer; position: absolute; right: 5px; top: -5px;"><strong>&times;</strong></button>
+    </div>
     <footer>
         <small>
             <p><a href="#" onclick="alert('Contact us at fiftys7ven@proxiedmail.com')">Contact Us</a> | <a href="v1/tos.html">Terms Of Service</a> | <a href="https://github.com/fiftys7vencode/webbuild/issues">Report Issue</a></p>
@@ -58,4 +61,18 @@
         </small>
     </footer>
 </body>
+    <script>
+        document.getElementById('closeNotice').addEventListener('click', function() {
+    var notice = document.getElementById('localStorageNotice');
+    notice.style.display = 'none';
+    localStorage.setItem('noticeClosed', 'true');
+});
+
+window.onload = function() {
+    if (localStorage.getItem('noticeClosed') === 'true') {
+        document.getElementById('localStorageNotice').style.display = 'none';
+    }
+};
+
+    </script>
 </html>
