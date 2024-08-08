@@ -3,62 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="manifest" href="/manifest.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>WebBuild - The Only Website Builder You Will Ever Need</title>
     <style>
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+        .hero {
+            background: rgba(0, 0, 0, 0.5) no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            animation: fadeInUp 1.5s;
+        }
+        .card {
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
         footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        .black {
+            color: #000;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        .black:hover {
+            color: #000;
         }
     </style>
-    <title>WebBuild</title>
 </head>
-<body class="w3-center">
-    <img src="builder/logo.png" width="125">
-    <h1>WebBuild</h1>
-    <p>Making a website is now easy.</p>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1 >Welcome to WebBuild</h1>
+            <p>The only website builder you will ever need. Easy, intuitive, and powerful.</p>
+            <a href="builder/index.html" class="btn btn-success">Get Started</a> <a href="#features" class="btn btn-primary">Learn More</a>
+        </div>
+    </header>
 
-    <a href="agreetotos.html" class="w3-button w3-green w3-round">Start now for FREE</a>
-    <hr>
-    <table class="w3-table w3-striped w3-bordered">
-        <tr class="w3-blue">
-            <th>Feature</th>
-            <th>WebBuild</th>
-            <th>Other Website Builders</th>
-        </tr>
+    <div class="container my-4">
+        <h2 id="features" class="text-center mb-4">Features</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="src1.png" class="card-img-top" alt="Feature 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Easier than you think <i class="bi bi-mouse"></i></h5>
+                        <p class="card-text">Easily customize your website with our very simple to use interface.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="src2.png" class="card-img-top" alt="Feature 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Simple Panel <i class="bi bi-window-sidebar"></i></h5>
+                        <p class="card-text">Our simple, yet powerful panel allows you to continue building your sites.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="src3.png" class="card-img-top" alt="Feature 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Open Source <i class="bi bi-unlock"></i></h5>
+                        <p class="card-text">The builder is 100% open source. Check out the code on <a class="black" href="https://github.com/fiftys7vencode/webbuild">Github</a>.</p>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
 
-        <tr>
-            <th>All features for free</th>
-            <th>Yes</th>
-            <th>No</th>
-        </tr>
-
-        <tr>
-            <th>Export to HTML</th>
-            <th>Yes</th>
-            <th>No</th>
-        </tr>
-
-        <tr>
-            <th>Hosting</th>
-            <th>No</th>
-            <th>Yes</th>
-        </tr>
-
-        <tr>
-            <th>Allowing custom HTML</th>
-            <th>Yes</th>
-            <th>No</th>
-        </tr>
-    </table>
-
-    <p><small>"Other Website Builders" features are different across different ones.</small></p>
-
-    <footer class="w3-black">
-        <p><a href="#" onclick="alert('Contact us at fiftys7ven@proxiedmail.com')">Contact Us</a> | <a href="tos.html">Terms of Service</a></p>
-        <p><small>&copy; 2024 fiftys7ven</small></p>
+    <footer>
+        <small>
+            <p><a href="#" onclick="alert('Contact us at fiftys7ven@proxiedmail.com')">Contact Us</a> | <a href="v1/tos.html">Terms Of Service</a> | <a href="https://github.com/fiftys7vencode/webbuild/issues/new">Report Issue</a></p>
+            <p>&copy; 2024 WebBuild. <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>.</p>
+        </small>
     </footer>
 </body>
 </html>

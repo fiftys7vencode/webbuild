@@ -1,8 +1,0 @@
-{
-    "name": "WebBuild",
-    "theme_color": "#2196f3",
-    "background_color": "#000000",
-    "display": "standalone",
-    "scope": "/",
-    "start_url": "/builder/index.html"
-  }

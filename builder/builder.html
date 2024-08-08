@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>body{font-family:sans-serif}</style>
+    <link rel="icon" href="logo.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+    <title>WebBuild Website Builder</title>
+</head>
+<body>
+    <div id="itemssidebar" style="text-align: center; height:100%;width:20%;position:fixed!important;z-index:1;overflow:auto">
+        <h2>Items</h2>
+        <p><small>Text Elements</small></p><hr>
+        <p><button onclick="addItem('heading1')" title="Text element typically used for website titles.">Heading 1</button></p>
+        <p><button onclick="addItem('heading2')" title="Text element typically used for section titles.">Heading 2</button></p>
+        <p><button onclick="addItem('heading3')" title="Text element typically used for subsection titles.">Heading 3</button></p>
+        <p><button onclick="addItem('text')" title="Standard text element for paragraphs.">Text</button></p>
+        <p><button onclick="addItem('quote')" title="Text element used for displaying quotes.">Quote</button></p>
+    
+        <p><small>Interactive Elements</small></p><hr>
+        <p><button onclick="addItem('link')" title="Hyperlink element for navigation.">Link</button></p>
+        <p><button onclick="addItem('button')" title="Clickable button for interactions.">Button</button></p>
+        <p><button onclick="addItem('inputfield')" title="Field for user input.">Input Field</button></p>
+        <p><button onclick="addItem('inputbox')" title="Box for multiline user input.">Input Box</button></p>
+        <p><button onclick="addItem('checkbox')" title="Checkbox for selection.">Checkbox</button></p>
+        <p><button onclick="addItem('progressbar')" title="Visual indicator of progress.">Progress Bar</button></p>
+    
+        <p><small>Structural Elements</small></p><hr>
+        <p><button onclick="addItem('footer')" title="Footer section of the webpage.">Footer</button></p>
+        <p><button onclick="addItem('separator')" title="Horizontal line for separation of content.">Separator</button></p>
+        <p><button onclick="addItem('card')" title="Card element for grouping related content.">Card</button></p>
+    
+        <p><small>Data Elements</small></p><hr>
+        <p><button onclick="addItem('table')" title="Table for displaying tabular data.">Table</button></p>
+        <p><button onclick="addItem('image')" title="Image element for displaying pictures.">Image</button></p>
+    
+        <p><small>Embedded Elements</small></p><hr>
+        <p><button onclick="addItem('websiteembed')" title="Embed another website within the page.">Website Embed</button></p>
+        <p><button onclick="addItem('customhtml')" title="Add custom HTML content.">Custom HTML</button></p>
+        <hr>
+    </div>
+    
+    
+    <div id="navigationbar" style="margin-left:20%;width:100%;overflow:hidden;padding:5px;">
+        <div onclick="exportToHTML()" class="button" title="Exports your website to HTML code.">Export to HTML</div>
+        <div onclick="deleteItem()" class="button" title="Allows you to delete an item.">Delete Item</div>
+        <div onclick="editSetting()" class="button" title="Allows you to change any HTML property of an item.">Edit Setting</div>
+        <div onclick="save()" class="button" title="Save's your site to the WebBuild panel.">Save</div>
+        <div id="togglemodebutton" onclick="toggleMode()" class="button" title="Opens the JavaScript code editor.">Code</div>
+        <div onclick="window.location.assign('index.html')" class="button" title="Redericts you to the homepage.">Panel</div>
+    </div>
+      
+    <div id="websitepreview" style="margin-left:20%;text-align: center;"><script id="websitepreviewjs"></script></div>
+    <div id="jseditor" style="display: none;"><textarea spellcheck="false" style="width: 100%; resize:vertical;" placeholder="JavaScript code here..." id="jscode"></textarea> <p style="width: 100%;" class="button" onclick="saveCode()">Save</p></div>
+
+    <div id="alertDialog" title="Alert" style="display:none;">
+        <p id="alertMessage"></p>
+    </div>
+    <div id="confirmDialog" title="Confirm" style="display:none;">
+        <p id="confirmMessage"></p>
+    </div>
+    <div id="promptDialog" title="Prompt" style="display:none;">
+        <p id="promptMessage"></p>
+        <input type="text" id="promptInput" style="width:100%;" />
+    </div>
+</body>
+
+<script src="builder.js"></script>
+
+</html>

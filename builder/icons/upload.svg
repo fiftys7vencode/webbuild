@@ -1,0 +1,8 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+	<title>Nowy projekt</title>
+	<style>
+		.s0 { fill: #000000;stroke: #000000;stroke-miterlimit:100;stroke-width: 5.1 } 
+	</style>
+	<path id="Kształt 1" class="s0" d="m260 394.3h-7.3v-138.7h-32.5l36.2-86.7 36.1 86.7h-32.5z"/>
+	<path id="Kształt 2" class="s0" d="m365 118v7.2h-217v-7.2z"/>
+</svg>

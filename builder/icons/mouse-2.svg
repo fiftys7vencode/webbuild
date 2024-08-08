@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+	<title>Nowy projekt</title>
+	<defs>
+		<image  width="512" height="512" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIAAQMAAADOtka5AAAAAXNSR0IB2cksfwAAAANQTFRF////p8QbyAAAAIxJREFUeJztzDENAAAMA6DVv+mJ6NUEBJArRSAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgWA7eMqeAgEiRD3HAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		.s0 { fill: none;stroke: #000000;stroke-miterlimit:100;stroke-width: 5.1 } 
+		.s1 { fill: #000000;stroke: #000000;stroke-miterlimit:100;stroke-width: 2 } 
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+	<path id="Kształt 1" class="s0" d="m251 139.6h10c27.6 0 50 22.4 50 50v131.8c0 27.6-22.4 50-50 50h-10c-27.6 0-50-22.4-50-50v-131.8c0-27.6 22.4-50 50-50z"/>
+	<path id="Kształt 2" class="s1" d="m201 203.4v-5h110v5z"/>
+	<path id="Kształt 3" class="s1" d="m258.5 201.9h-5v-62h5z"/>
+</svg>
