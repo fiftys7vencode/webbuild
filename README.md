@@ -3,7 +3,7 @@
 <br>
 
   # WebBuild
-  WebBuild is a **free**, powerful, and intuitive website builder with **no backend** dependencies, allowing you to create stunning websites seamlessly.
+  WebBuild is a **free**, powerful, and intuitive website builder with **no backend**, allowing you to create stunning websites seamlessly.
   ## Features
   Below you’ll find a comprehensive list of all features designed to make your web-building experience efficient and enjoyable.
   
