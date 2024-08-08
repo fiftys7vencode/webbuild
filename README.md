@@ -51,7 +51,7 @@
 
   <hr>
 
-  - Star it on [Github](https://github.com/@fiftys7vencode)
+  - Star it on [Github](https://github.com/fiftys7vencode/webbuild)
 </div>
 
 Regards,
