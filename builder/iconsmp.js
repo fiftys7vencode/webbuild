@@ -64,7 +64,7 @@ const icons = [
 document.getElementById("amount").innerText = "Currently we have " + icons.length + " icons."
 
 function showIconEmbed(icon) {
-    prompt(`Select "Image" in the builder and then paste in this URL: `, `https://fiftys7vencode.github.io/builder/icons/${icon}.svg`);
+    prompt(`Select "Image" in the builder and then paste in this URL: `, `https://fiftys7vencode.github.io/webbuild/builder/icons/${icon}.svg`);
 }
 
 function createIconCard(icon) {
