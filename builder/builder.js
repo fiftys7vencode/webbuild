@@ -24,6 +24,10 @@ $(document).ready(function() {
 
 });
 
+if (!localStorage.getItem("setupCompleted")) {
+    location.assign("config/index.html");
+};
+
 function save() {
     if(preview.innerHTML) {
         showPrompt("Enter the site's name below:", save2);

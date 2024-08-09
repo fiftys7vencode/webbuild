@@ -75,7 +75,11 @@ const icons = [
     "graph-down-2"
 ].sort();
 
-document.getElementById("amount").innerText = "Currently we have " + icons.length + " icons."
+document.getElementById("amount").innerText = "Currently we have " + icons.length + " icons.";
+
+if (!localStorage.getItem("setupCompleted")) {
+    location.assign("config/index.html");
+};
 
 function showIconEmbed(icon) {
     prompt(`Select "Image" in the builder and then paste in this URL: `, `https://webbuild.js.org/builder/icons/${icon}.svg`);

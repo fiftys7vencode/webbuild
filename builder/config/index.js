@@ -2,6 +2,10 @@ const usrname = document.getElementById("usernameinput");
 const agree = document.getElementById("agreetotos");
 
 
+if (localStorage.getItem("setupCompleted")) {
+    location.assign("/index.html");
+};
+
 function completeSetup() {
     if(usrname.value) {
         if(agree.checked) {
