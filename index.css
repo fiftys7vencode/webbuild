@@ -45,17 +45,17 @@ footer {
 }
 
 a {
-    color: #fff;
+    color: #000;
 }
-
 .black {
     color: #000;
 }
 
-a:hover {
-    color: #fff;
-}
 
 .black:hover {
     color: #000;
+}
+
+footer a {
+    color: #fff;
 }
