@@ -429,7 +429,8 @@ function addItem(item) {
                     });
                     break;
                     case "icon":
-                        window.open("/builder/icons.html");
+                        window.open("icons.html");
+                        showAlert("Icons opened in new tab.");
                     break;
             }
         }
