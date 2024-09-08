@@ -428,6 +428,9 @@ function addItem(item) {
                         });
                     });
                     break;
+                    case "icon":
+                        window.open("/builder/icons.html");
+                    break;
             }
         }
     });
