@@ -1,54 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebBuild Panel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>WebBuild Panel</title>
-<body>
-    <div class="alert alert-warning" role="alert">
-    <i class="bi bi-exclamation-triangle-fill"></i> You are using the alpha version of the new WebBuild. Please report bugs <a href="https://github.com/fiftys7vencode/webbuild/issues/new?template=bug_report.md">here</a>.
-      </div>
-    <br>      
-    <h2>Welcome Back,</h2>
-    <h4 id="usernameLabel"></h4>
-    <br><br>
-    <h2>My Sites</h2>
-    <hr>
-    <div>
-        <button class="btn btn-primary" onclick="location.assign('builder.html')" style="width:100%;">Create New</button>
-        <br><br>
-        <p id="websitecounter" style="width: 100%;text-align: center;">Looks like no websites created yet!</p>
-        <div id="sitesdisplay" class="row">
+</head>
 
-        </div>     
+<body>
+    <!-- Alert Section -->
+    <div class="alert alert-warning d-flex align-items-center" role="alert">
+        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+        You are using the alpha version of the new WebBuild. Please report bugs
+        <a href="https://github.com/fiftys7vencode/webbuild/issues/new?template=bug_report.md" class="alert-link ms-1">here</a>.
     </div>
-    <div id="localStorageNotice" style="background-color: #f8f8f8; padding: 10px; text-align: center; font-size: 14px; position: relative;">
-        This site stores your nickname and site content locally in your browser to enable editing and personalization features. No data is sent to a server.
-        <button id="closeNotice" style="background-color: transparent; border: none; font-size: 14px; cursor: pointer; position: absolute; right: 5px; top: -5px;"><strong>&times;</strong></button>
-    </div>    
+
+    <!-- Local Storage Notice -->
+        <div id="localStorageNotice" class="alert alert-secondary d-flex justify-content-between align-items-center mt-4">
+            <span>This site stores your nickname and site content locally in your browser to enable editing and personalization features. No data is sent to a server.</span>
+        </div>
     </div>
-    <hr>
-    <h2>News</h2>
-    <p>There are currently no news.</p>
-    <hr>
-    <p align="center"><small><a href="deprecated.html" style="color:gray;">Deprecated Features</a></small></p>
-</body>
+
+    <!-- Welcome Section -->
+    <div class="container my-4">
+        <div class="text-center">
+            <h2>Welcome Back,</h2>
+            <h4 id="usernameLabel" class="fw-light"></h4>
+        </div>
+
+        <!-- My Sites Section -->
+        <section class="mt-5">
+            <h2>My Sites</h2>
+            <hr>
+            <button class="btn btn-primary w-100 mb-3" onclick="location.assign('builder.html')">Create New</button>
+            <p id="websitecounter" class="text-center text-muted">Looks like no websites created yet!</p>
+            <div id="sitesdisplay" class="row g-3">
+                <!-- Dynamic site content will be injected here -->
+            </div>
+        </section>
+
+    <!-- News Section -->
+    <div class="container">
+        <section class="mt-5">
+            <h2>News</h2>
+            <hr>
+            <p class="text-muted">There are currently no news.</p>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="text-center py-4">
+        <p class="mb-0"><small><a href="deprecated.html" class="text-muted">Deprecated Features</a></small></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="index.js"></script>
     <script>
-        document.getElementById('closeNotice').addEventListener('click', function() {
-    var notice = document.getElementById('localStorageNotice');
-    notice.style.display = 'none';
-    localStorage.setItem('noticeClosed', 'true');
-});
+        // Close notice button functionality
+        document.getElementById('closeNotice').addEventListener('click', function () {
+            var notice = document.getElementById('localStorageNotice');
+            notice.style.display = 'none';
+            localStorage.setItem('noticeClosed', 'true');
+        });
 
-window.onload = function() {
-    if (localStorage.getItem('noticeClosed') === 'true') {
-        document.getElementById('localStorageNotice').style.display = 'none';
-    }
-};
-
+        // Check local storage for notice visibility
+        window.onload = function () {
+            if (localStorage.getItem('noticeClosed') === 'true') {
+                document.getElementById('localStorageNotice').style.display = 'none';
+            }
+        };
     </script>
+</body>
+
 </html>
