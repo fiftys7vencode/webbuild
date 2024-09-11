@@ -428,10 +428,6 @@ function addItem(item) {
                         });
                     });
                     break;
-                    case "icon":
-                        window.open("icons.html");
-                        showAlert("Icons opened in new tab.");
-                    break;
             }
         }
     });
