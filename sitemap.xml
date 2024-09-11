@@ -8,6 +8,20 @@
   </url>
 
     <url>
+    <loc>https://webbuild.js.org/getstarted</loc>
+    <lastmod>2024-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+      <url>
+    <loc>https://webbuild.js.org/builder/depracted</loc>
+    <lastmod>2024-09-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+    <url>
     <loc>https://webbuild.js.org/src1.png</loc>
     <lastmod>2024-09-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -65,13 +79,6 @@
 
   <url>
     <loc>https://webbuild.js.org/builder/builder</loc>
-    <lastmod>2024-09-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-    <url>
-    <loc>https://webbuild.js.org/builder/icons.html</loc>
     <lastmod>2024-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
