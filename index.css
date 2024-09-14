@@ -1,61 +1,6 @@
-body {
-    background-color: #f4f7f6;
-    color: #333;
-    font-family: Arial, sans-serif;
+html {
+  scroll-behavior: smooth;
 }
-.hero {
-    background: rgba(0, 0, 0, 0.5) no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 100px 0;
-}
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    animation: fadeInUp 1s;
-}
-.hero p {
-    font-size: 1.2rem;
-    animation: fadeInUp 1.5s;
-}
-.card {
-    transition: transform 0.3s ease;
-}
-.card:hover {
-    transform: scale(1.05);
-}
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-a {
-    color: #000;
-}
-.black {
-    color: #000;
-}
-
-
-.black:hover {
-    color: #000;
-}
-
-footer a {
-    color: #fff;
+img,video {
+  width: 100%;
 }
