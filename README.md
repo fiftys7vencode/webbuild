@@ -22,8 +22,7 @@ Start building your website now with the **[WebBuild Builder](https://webbuild.j
 To get started with WebBuild, simply visit the builder link and begin designing:
 
 - Visit: [WebBuild Builder](https://webbuild.js.org/builder/index.html)
-- Choose a template or start from scratch
-- Use the drag-and-drop interface to add elements
+- Use the simple interface to add elements
 - Customize the elements using the properties panel
 - Publish your website when ready
 
