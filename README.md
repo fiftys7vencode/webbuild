@@ -1,56 +1,49 @@
-<div align="center">
-<img src="https://github.com/fiftys7vencode/webbuild/blob/main/builder/icons/webbuild.svg" width=100>
-<br>
+# WebBuild - Open Source Website Builder
 
-  # WebBuild
-  WebBuild is a **free**, powerful, and intuitive website builder with **no backend**, allowing you to create stunning websites seamlessly.
-  ## Features
-  Below you’ll find a comprehensive list of all features designed to make your web-building experience efficient and enjoyable.
-  
-  ### The Panel
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fwebbuild.js.org)](https://fiftys7vencode.github.io/upptime/history/web-build)
+[![License](https://img.shields.io/github/license/fiftys7vencode/webbuild)](https://github.com/fiftys7vencode/webbuild/blob/main/LICENSE)
 
-  <hr>
-  <img src="https://github.com/fiftys7vencode/webbuild/blob/main/src2.png" width=512>
-  <hr>
+WebBuild is a **free**, open-source website builder designed to make website creation intuitive and accessible to everyone. Whether you're a seasoned developer or just starting out, WebBuild provides the tools you need to create beautiful, responsive websites with ease — right from your browser.
 
-  The panel allows you to access all of your websites quickly and continue editing them. It greets you with a clean interface, showcasing your websites and offering additional features for easy management. Isn't that nice?
+## Features
 
-  ### The Builder
+- **Easy-to-use Interface:** Design your website visually with an easy-to-use builder.
+- **Live Preview:** Instantly see the changes you make as you design.
+- **Responsive Design:** Automatically create mobile-friendly layouts.
+- **No Coding Required:** Create websites without writing a single line of code, but full code access is available for advanced users.
+- **Open Source:** Fully open-source and free to use. Customize and extend the builder as you wish.
 
-  <hr>
-  <img src="https://github.com/fiftys7vencode/webbuild/blob/main/src1.png" width=512>
-  <hr>
-  
-  The builder allows you to make your website with a very easy to use, simple UI. It contains everything you will need to fully launch your website. Isn't that also nice?
+## Try It Now
 
-  ### Icons Marketplace
+Start building your website now with the **[WebBuild Builder](https://webbuild.js.org/builder/index.html)**.
 
-  <hr>
-  <img src="https://github.com/fiftys7vencode/webbuild/blob/main/src4.png" width=512>
-  <hr>
+## Getting Started
 
-  The Icons Marketplace provides a vast collection of free icons that you can easily incorporate into your website. With thousands of icons available, you can find the perfect visual elements to enhance your site’s design.
+To get started with WebBuild, simply visit the builder link and begin designing:
 
-  ### Additional Features
+- Visit: [WebBuild Builder](https://webbuild.js.org/builder/index.html)
+- Use the simple interface to add elements
+- Customize the elements using the properties panel
+- Publish your website when ready
 
-  #### No Coding Required
-  You don’t need any coding knowledge to create a website with WebBuild. All features are accessible through an intuitive graphical interface, so you can focus on design and content rather than technical details.
+## Contributing
 
-  #### Real-Time Preview
-  WebBuild offers a real-time preview feature that allows you to see changes as you make them. This ensures your website looks exactly how you want it before going live.
+We welcome contributions from the community! If you're interested in improving WebBuild, fixing bugs, or adding new features:
 
-  # So what are you waiting for?
-  Check out WebBuild [here](https://webbuild.js.org)!
-  
-  Do you like it? It would be really appreciated to:
+1. Fork the repository on GitHub.
+2. Create a new branch for your feature or bugfix.
+3. Submit a pull request with a clear description of your changes.
 
-  - Share it on [X](https://twitter.com/share?url=https://webbuild.js.org)
-  - Share it on [Facebook](https://www.facebook.com/sharer/sharer.php?u=https://webbuild.js.org)
-  - Share it on [Whatsapp](https://api.whatsapp.com/send?text=Check%20this%20out!%20https://webbuild.js.org)
-  - Share it on [LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=https://webbuild.js.org)
-  - Star it on [Github](https://github.com/fiftys7vencode/webbuild)
-</div>
+## Resources
 
-Regards,
+- **Website:** [https://webbuild.js.org](https://webbuild.js.org)
+- **Builder:** [https://webbuild.js.org/builder/index.html](https://webbuild.js.org/builder/index.html)
+- **GitHub Repository:** [https://github.com/fiftys7vencode/webbuild](https://github.com/fiftys7vencode/webbuild)
 
-fiftys7ven
+## License
+
+WebBuild is licensed under the Apache-2.0 License. See the [LICENSE](https://github.com/fiftys7vencode/webbuild/blob/main/LICENSE) file for more details.
+
+---
+
+Start building the web today with **WebBuild**!
