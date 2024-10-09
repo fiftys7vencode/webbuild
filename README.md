@@ -1,9 +1,13 @@
 # WebBuild - Open Source Website Builder
 
+<br>
+
 > [!WARNING]  
 > Please note that WebBuild has closed it's developement since 10/9/2024.
 > Tutorial to recover your websites will arrive soon.
 > You can still use WebBuild by downloading it on your computer and running it locally.
+
+<br>
 
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fwebbuild.js.org)](https://fiftys7vencode.github.io/upptime/history/web-build)
 [![License](https://img.shields.io/github/license/fiftys7vencode/webbuild)](https://github.com/fiftys7vencode/webbuild/blob/main/LICENSE)
