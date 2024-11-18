@@ -2,10 +2,8 @@
 
 <br>
 
-> [!WARNING]  
-> Please note that WebBuild has closed it's developement since 10/9/2024.
-> Tutorial to recover your websites will arrive soon.
-> You can still use WebBuild by downloading it on your computer and running it locally.
+> [!TIP]  
+> If you want to use a website similiar to WebBuild we recommend using [Sitesos](https://sitesos.github.io).
 
 <br>
 
