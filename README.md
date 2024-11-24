@@ -1,12 +1,5 @@
 # WebBuild - Open Source Website Builder
 
-<br>
-
-> [!TIP]  
-> If you want to use a website similiar to WebBuild we recommend using [Sitesos](https://sitesos.github.io).
-
-<br>
-
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fwebbuild.js.org)](https://fiftys7vencode.github.io/upptime/history/web-build)
 [![License](https://img.shields.io/github/license/fiftys7vencode/webbuild)](https://github.com/fiftys7vencode/webbuild/blob/main/LICENSE)
 
