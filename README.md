@@ -1,6 +1,6 @@
 # WebBuild - Open Source Website Builder
 
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fwebbuild.js.org)](https://fiftys7vencode.github.io/upptime/history/web-build)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fwebbuild.js.org)
 [![License](https://img.shields.io/github/license/fiftys7vencode/webbuild)](https://github.com/fiftys7vencode/webbuild/blob/main/LICENSE)
 
 WebBuild is a **free**, open-source website builder designed to make website creation intuitive and accessible to everyone. Whether you're a seasoned developer or just starting out, WebBuild provides the tools you need to create beautiful, responsive websites with ease — right from your browser.
