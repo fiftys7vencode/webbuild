@@ -3,113 +3,84 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Free online website builder WebBuild">
-    <meta name="keywords" content="Website builder, website building, create websites for free, website creator, my own website, HTML, CSS, JavaScript">
-    <meta name="google-site-verification" content="8DnQF6B5vVJqVxG302sgmEdiYJnPx2dtBalyPMX9p2c">
-    <meta name="author" content="fiftys7ven">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta property="og:title" content="WebBuild - Free Online Website Builder">
-    <meta property="og:description" content="Create stunning websites for free with WebBuild. No coding skills required.">
-    <meta property="og:image" content="https://webbuild.js.org/src3.png">
-    <meta property="og:url" content="https://webbuild.js.org">
-    <meta property="og:type" content="website">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="WebBuild - Free Online Website Builder">
-    <meta name="twitter:description" content="Create stunning websites for free with WebBuild. No coding skills required.">
-    <meta name="twitter:image" content="https://webbuild.js.org/src3.png">
-
-    <link rel="canonical" href="https://webbuild.js.org">
-
-    <meta name="robots" content="index, follow">
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "WebBuild",
-        "url": "https://webbuild.js.org",
-        "description": "Free online website builder WebBuild"
-    }
-    </script>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="EN">
+    <meta name="subject" content="WebBuild - Free Website Builder">
+    <meta name="description" content="Create stunning websites for free with WebBuild. No coding skills are required. Easily customize your site with our intuitive interface.">
+    <meta name="keywords" content="free website builder, create websites online, no coding website creator, web design, HTML, CSS, JavaScript, responsive websites, drag and drop builder, free templates, website creator for small business">
+    <meta name="author" content="Boltxyz, plwmail@duck.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="General">
+    <meta name="distribution" content="Global">
+    <meta name="theme-color" content="#007BFF">
+    <meta name="application-name" content="WebBuild">
+    <meta name="generator" content="WebBuild Platform">
+    <meta name="apple-mobile-web-app-title" content="WebBuild">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:title" content="WebBuild - Free Website Builder">
+    <meta property="og:description" content="Create stunning websites for free with WebBuild. No coding skills are required. Easily customize your site with our intuitive interface.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.webbuild.js.org">
+    <meta property="og:image" content="https://www.webbuild.js.org/webbuild.png">
+    <meta property="og:site_name" content="WebBuild">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WebBuild - Free Website Builder">
+    <meta name="twitter:description" content="Create stunning websites for free with WebBuild. No coding skills are required. Easily customize your site with our intuitive interface.">
+    <meta name="twitter:image" content="https://www.webbuild.js.org/webbuild.png">
+    <meta name="msapplication-TileColor" content="#007BFF">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="8DnQF6B5vVJqVxG302sgmEdiYJnPx2dtBalyPMX9p2c" />
+    <meta name="norton-safeweb-site-verification" content="2WR7UPTN2KTPBVR20RYZ076P-678-FWCP610UNJPY3OQXRMS8N5SA608Z5A-5EBIKKOH2BA95MX86VTCC4S9O964KUD5Z5KMGED0GCQDF53MS6ZPANV-14CAV06ZA4PL" />
     <title>WebBuild | Panel</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Alert Section -->
-    <div class="alert alert-warning d-flex align-items-center" role="alert">
-        <i class="bi bi-exclamation-triangle-fill me-2"></i>
-        You are using the alpha version of the new WebBuild. Please report bugs
-        <a href="https://github.com/fiftys7vencode/webbuild/issues/new?template=bug_report.md" class="alert-link ms-1">here</a>.
-    </div>
 
     <!-- Local Storage Notice -->
-    <div id="localStorageNotice" class="alert alert-secondary d-flex justify-content-between align-items-center mt-4">
-        <span>This site stores your nickname and site content locally in your browser to enable editing and personalization features. No data is sent to a server.</span>
+    <div id="localStorageNotice" class="notification is-light mt-4">
+        <button id="closeNotice" class="delete"></button>
+        This site stores your nickname and site content locally in your browser to enable editing and personalization features. No data is sent to a server.
     </div>
 
-    <!-- Sidebar and Main Content -->
-    <div class="container-fluid">
-        <div class="row">
-            <!-- Sidebar -->
-            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                <div class="position-sticky">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <h4>WebBuild</h4>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Panel
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="builder.html">
-                                Builder
-                            </a>
-                        </li>
-                    </ul>
+        <!-- Main Content -->
+        <main>
+            <div class="container my-4">
+                <div class="has-text-centered">
+                    <h2 class="title">Welcome Back,</h2>
+                    <h4 id="usernameLabel" class="subtitle is-4 has-text-weight-light"></h4>
                 </div>
-            </nav>
 
-            <!-- Main Content -->
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                <div class="container my-4">
-                    <div class="text-center">
-                        <h2>Welcome Back,</h2>
-                        <h4 id="usernameLabel" class="fw-light"></h4>
+                <!-- My Sites Section -->
+                <section class="mt-5">
+                    <h2 class="title is-4">My Sites</h2>
+                    <hr>
+                    <button class="button is-primary is-fullwidth mb-3" onclick="location.assign('builder.html')">Create New</button>
+                    <p id="websitecounter" class="has-text-centered has-text-grey">Looks like no websites created yet!</p>
+                    <div id="sitesdisplay" class="columns is-multiline">
+                        <!-- Dynamic site content will be injected here -->
                     </div>
+                </section>
 
-                    <!-- My Sites Section -->
-                    <section class="mt-5">
-                        <h2>My Sites</h2>
-                        <hr>
-                        <button class="btn btn-primary w-100 mb-3" onclick="location.assign('builder.html')">Create New</button>
-                        <p id="websitecounter" class="text-center text-muted">Looks like no websites created yet!</p>
-                        <div id="sitesdisplay" class="row g-3">
-                            <!-- Dynamic site content will be injected here -->
-                        </div>
-                    </section>
-
-                    <!-- News Section -->
-                    <section class="mt-5">
-                        <h2>News</h2>
-                        <hr>
-                        <p class="text-muted">There are currently no news.</p>
-                    </section>
-                </div>
-            </main>
-        </div>
+                <!-- News Section -->
+                <section class="mt-5">
+                    <h2 class="title is-4">News</h2>
+                    <hr>
+                    <p class="has-text-grey">There are currently no news.</p>
+                </section>
+            </div>
+        </main>
     </div>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <script>
         // Close notice button functionality
