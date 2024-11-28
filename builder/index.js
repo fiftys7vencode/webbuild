@@ -19,7 +19,7 @@ if (sitesData) {
         const [siteName, siteContent] = element;
         var cardcode = `
             <div class="col-md-2 mb-4">
-                <div class="card" onclick="location.assign('builder.html?sitecontent=${encodeURIComponent(siteContent)}')">
+                <div class="card is-clickable" onclick="location.assign('builder.html?sitecontent=${encodeURIComponent(siteContent)}')">
                     <img src="https://via.placeholder.com/350x200?text=${siteName}" class="card-img-top" alt="${siteName}">
                     <div class="card-body">
                         <h5 class="card-title">${siteName}</h5>

@@ -39,18 +39,19 @@
     <meta name="google-site-verification" content="8DnQF6B5vVJqVxG302sgmEdiYJnPx2dtBalyPMX9p2c" />
     <meta name="norton-safeweb-site-verification" content="2WR7UPTN2KTPBVR20RYZ076P-678-FWCP610UNJPY3OQXRMS8N5SA608Z5A-5EBIKKOH2BA95MX86VTCC4S9O964KUD5Z5KMGED0GCQDF53MS6ZPANV-14CAV06ZA4PL" />
     <title>WebBuild | Panel</title>
-    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+>
 </head>
 
 <body>
 
-    <!-- Local Storage Notice -->
     <div id="localStorageNotice" class="notification is-light mt-4">
         <button id="closeNotice" class="delete"></button>
         This site stores your nickname and site content locally in your browser to enable editing and personalization features. No data is sent to a server.
     </div>
 
-        <!-- Main Content -->
         <main>
             <div class="container my-4">
                 <div class="has-text-centered">
@@ -58,39 +59,26 @@
                     <h4 id="usernameLabel" class="subtitle is-4 has-text-weight-light"></h4>
                 </div>
 
-                <!-- My Sites Section -->
                 <section class="mt-5">
                     <h2 class="title is-4">My Sites</h2>
                     <hr>
-                    <button class="button is-primary is-fullwidth mb-3" onclick="location.assign('builder.html')">Create New</button>
+                    <button class="button is-fullwidth mb-3" onclick="location.assign('builder.html')">Create New</button>
                     <p id="websitecounter" class="has-text-centered has-text-grey">Looks like no websites created yet!</p>
                     <div id="sitesdisplay" class="columns is-multiline">
-                        <!-- Dynamic site content will be injected here -->
                     </div>
-                </section>
-
-                <!-- News Section -->
-                <section class="mt-5">
-                    <h2 class="title is-4">News</h2>
-                    <hr>
-                    <p class="has-text-grey">There are currently no news.</p>
                 </section>
             </div>
         </main>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <script>
-        // Close notice button functionality
         document.getElementById('closeNotice').addEventListener('click', function () {
             var notice = document.getElementById('localStorageNotice');
             notice.style.display = 'none';
             localStorage.setItem('noticeClosed', 'true');
         });
 
-        // Check local storage for notice visibility
         window.onload = function () {
             if (localStorage.getItem('noticeClosed') === 'true') {
                 document.getElementById('localStorageNotice').style.display = 'none';
