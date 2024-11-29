@@ -2,75 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <meta charset="UTF-8">
-<meta name="description" content="Free online website builder WebBuild">
-<meta name="keywords" content="Website builder, website building, create websites for free, website creator, my own website, HTML, CSS, JavaScript">
-<meta name="google-site-verification" content="8DnQF6B5vVJqVxG302sgmEdiYJnPx2dtBalyPMX9p2c">
-<meta name="author" content="fiftys7ven">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<meta property="og:title" content="WebBuild - Free Online Website Builder">
-<meta property="og:description" content="Create stunning websites for free with WebBuild. No coding skills required.">
-<meta property="og:image" content="https://webbuild.js.org/src3.png">
-<meta property="og:url" content="https://webbuild.js.org">
-<meta property="og:type" content="website">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="WebBuild - Free Online Website Builder">
-<meta name="twitter:description" content="Create stunning websites for free with WebBuild. No coding skills required.">
-<meta name="twitter:image" content="https://webbuild.js.org/src3.png">
-
-<link rel="canonical" href="https://webbuild.js.org">
-
-<meta name="robots" content="index, follow">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "WebBuild",
-  "url": "https://webbuild.js.org",
-  "description": "Free online website builder WebBuild"
-}
-</script>
-    <style>body{font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif}</style>
-    <link rel="icon" href="logo.png">
-    <link rel="manifest" href="/manifest.webmanifest">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
-    <title>WebBuild Website Builder</title>
+    <script src="jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.14.1.custom/jquery-ui.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    >
+    <title>WebBuild</title>
 </head>
 <body>
     <div id="itemssidebar" style="text-align: center; height:100%;width:20%;position:fixed!important;z-index:1;overflow:auto">
-        <h2>Items</h2>
-        <p><small>Text Elements</small></p><hr>
-        <p><button onclick="addItem('heading1')" title="Text element typically used for website titles.">Heading 1</button></p>
-        <p><button onclick="addItem('heading2')" title="Text element typically used for section titles.">Heading 2</button></p>
-        <p><button onclick="addItem('heading3')" title="Text element typically used for subsection titles.">Heading 3</button></p>
-        <p><button onclick="addItem('text')" title="Standard text element for paragraphs.">Text</button></p>
-        <p><button onclick="addItem('quote')" title="Text element used for displaying quotes.">Quote</button></p>
+        <h2 class="title">Items</h2>
+        <p>Text Elements</p><hr>
+        <p><button class="button" class="button" onclick="addItem('heading1')" title="Text element typically used for website titles.">Heading 1</button></p>
+        <p><button class="button" onclick="addItem('heading2')" title="Text element typically used for section titles.">Heading 2</button></p>
+        <p><button class="button" onclick="addItem('heading3')" title="Text element typically used for subsection titles.">Heading 3</button></p>
+        <p><button class="button" onclick="addItem('text')" title="Standard text element for paragraphs.">Text</button></p>
+        <br>
+        <p>Interactive Elements</p><hr>
+        <p><button class="button" onclick="addItem('link')" title="Hyperlink element for navigation.">Link</button></p>
+        <p><button class="button" onclick="addItem('button')" title="Clickable button for interactions.">Button</button></p>
+        <p><button class="button" onclick="addItem('inputfield')" title="Field for user input.">Input Field</button></p>
+        <p><button class="button" onclick="addItem('inputbox')" title="Box for multiline user input.">Input Box</button></p>
+        <p><button class="button" onclick="addItem('checkbox')" title="Checkbox for selection.">Checkbox</button></p>
+        <p><button class="button" onclick="addItem('progressbar')" title="Visual indicator of progress.">Progress Bar</button></p>
+        <br>
+        <p>Structural Elements</p><hr>
+        <p><button class="button" onclick="addItem('footer')" title="Footer section of the webpage.">Footer</button></p>
+        <p><button class="button" onclick="addItem('separator')" title="Horizontal line for separation of content.">Separator</button></p>
+        <p><button class="button" onclick="addItem('card')" title="Card element for grouping related content.">Card</button></p>
     
-        <p><small>Interactive Elements</small></p><hr>
-        <p><button onclick="addItem('link')" title="Hyperlink element for navigation.">Link</button></p>
-        <p><button onclick="addItem('button')" title="Clickable button for interactions.">Button</button></p>
-        <p><button onclick="addItem('inputfield')" title="Field for user input.">Input Field</button></p>
-        <p><button onclick="addItem('inputbox')" title="Box for multiline user input.">Input Box</button></p>
-        <p><button onclick="addItem('checkbox')" title="Checkbox for selection.">Checkbox</button></p>
-        <p><button onclick="addItem('progressbar')" title="Visual indicator of progress.">Progress Bar</button></p>
-    
-        <p><small>Structural Elements</small></p><hr>
-        <p><button onclick="addItem('footer')" title="Footer section of the webpage.">Footer</button></p>
-        <p><button onclick="addItem('separator')" title="Horizontal line for separation of content.">Separator</button></p>
-        <p><button onclick="addItem('card')" title="Card element for grouping related content.">Card</button></p>
-    
-        <p><small>Data Elements</small></p><hr>
-        <p><button onclick="addItem('table')" title="Table for displaying tabular data.">Table</button></p>
-        <p><button onclick="addItem('image')" title="Image element for displaying pictures.">Image</button></p>
-    
-        <p><small>Embedded Elements</small></p><hr>
-        <p><button onclick="addItem('websiteembed')" title="Embed another website within the page.">Website Embed</button></p>
-        <p><button onclick="addItem('customhtml')" title="Add custom HTML content.">Custom HTML</button></p>
+        <p>Data Elements</p><hr>
+        <p><button class="button" onclick="addItem('table')" title="Table for displaying tabular data.">Table</button></p>
+        <p><button class="button" onclick="addItem('image')" title="Image element for displaying pictures.">Image</button></p>
+        <br>
+        <p>Embedded Elements</p><hr>
+        <p><button class="button" onclick="addItem('websiteembed')" title="Embed another website within the page.">Website Embed</button></p>
+        <p><button class="button" onclick="addItem('customhtml')" title="Add custom HTML content.">Custom HTML</button></p>
         <hr>
     </div>
     
@@ -99,7 +68,7 @@
     </div>
     <div id="localStorageNotice" style="background-color: #f8f8f8; padding: 10px; text-align: center; font-size: 14px; position: relative;">
         This site stores your nickname and site content locally in your browser to enable editing and personalization features. No data is sent to a server.
-        <button id="closeNotice" style="background-color: transparent; border: none; font-size: 14px; cursor: pointer; position: absolute; right: 5px; top: -5px;"><strong>&times;</strong></button>
+        <button class="button" id="closeNotice" style="background-color: transparent; border: none; font-size: 14px; cursor: pointer; position: absolute; right: 5px; top: -5px;"><strong>&times;</strong></button>
 </body>
 
 <script src="builder.js"></script>
