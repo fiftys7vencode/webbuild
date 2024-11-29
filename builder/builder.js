@@ -317,20 +317,22 @@ function addItem(item) {
                         });
                     });
                     break;
-                case "checkbox":
-                    showPrompt("Name: ", function(name) {
-                        showPrompt("Label: ", function(label) {
-                            var element = document.createElement("div");
-                            element.id = name;
-                            var input = document.createElement("input");
-                            input.type = "checkbox";
-                            var labelElement = document.createElement("label");
-                            labelElement.innerText = label;
-                            element.appendChild(input);
-                            element.appendChild(labelElement);
-                            preview.appendChild(element);
+                    case "checkbox":
+                        showPrompt("Name: ", function(name) {
+                            showPrompt("Label: ", function(label) {
+                                var element = document.createElement("div");
+                                element.id = name;
+                                var labelElement = document.createElement("label");
+                                labelElement.classList.add("checkbox");
+                                var input = document.createElement("input");
+                                input.type = "checkbox";
+                                labelElement.insertBefore(input, labelElement.firstChild);
+                                labelElement.appendChild(document.createTextNode(label));
+                                element.appendChild(labelElement);
+                                preview.appendChild(element);
+                            });
                         });
-                    });
+                    
                     break;
                 case "card":
                     showPrompt("Name: ", function(name) {
@@ -339,8 +341,9 @@ function addItem(item) {
                                 var element = document.createElement("div");
                                 element.id = name;
                                 element.classList.add("card");
-                                var titleElement = document.createElement("h3");
+                                var titleElement = document.createElement("h1");
                                 titleElement.innerText = title;
+                                titleElement.classList.add("title");
                                 var contentElement = document.createElement("p");
                                 contentElement.innerText = content;
                                 element.appendChild(titleElement);
